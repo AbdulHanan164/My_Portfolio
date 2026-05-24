@@ -52,30 +52,67 @@ async def send_email_async(contact_data: ContactForm, client_ip: str):
 
     # Construct the email message
     msg = EmailMessage()
-    msg['Subject'] = f"Portfolio Contact: {contact_data.subject}"
-    msg['From'] = gmail_user
+    msg['Subject'] = f"🚀 New Portfolio Lead: {contact_data.subject}"
+    msg['From'] = f"Portfolio Alert <{gmail_user}>"
     msg['To'] = gmail_user  # Send to yourself
     msg['Reply-To'] = contact_data.email
 
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
-    # Email body format
-    body = f"""
+    # Fallback Plain Text body
+    text_body = f"""
     New Contact Form Submission from Portfolio
-
-    -----------------------------------------
-    Timestamp: {timestamp}
-    Client IP: {client_ip}
-    -----------------------------------------
-
+    
     Name: {contact_data.name}
     Email: {contact_data.email}
     Subject: {contact_data.subject}
-
-    Message:
-    {contact_data.message}
+    Message: {contact_data.message}
     """
-    msg.set_content(body)
+    msg.set_content(text_body)
+
+    # Eye-catching HTML body
+    html_body = f"""
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <style>
+            body {{ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7f6; margin: 0; padding: 20px; }}
+            .container {{ max-width: 600px; background-color: #ffffff; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin: 0 auto; border-top: 5px solid #00E5FF; }}
+            h2 {{ color: #1a1a1a; margin-top: 0; font-size: 24px; border-bottom: 2px solid #f0f0f0; padding-bottom: 15px; }}
+            .info-block {{ background-color: #f8fafc; border-radius: 8px; padding: 20px; margin-bottom: 25px; }}
+            .info-item {{ margin-bottom: 12px; font-size: 15px; }}
+            .info-label {{ font-weight: 600; color: #64748b; display: inline-block; width: 80px; text-transform: uppercase; font-size: 12px; letter-spacing: 0.5px; }}
+            .info-value {{ color: #0f172a; font-weight: 500; }}
+            .message-block {{ background-color: #ffffff; border-left: 4px solid #6366f1; padding: 15px 20px; margin-top: 10px; border-radius: 0 8px 8px 0; box-shadow: 0 2px 5px rgba(0,0,0,0.02); }}
+            .message-label {{ font-weight: 600; color: #64748b; margin-bottom: 10px; text-transform: uppercase; font-size: 12px; letter-spacing: 0.5px; }}
+            .message-content {{ color: #334155; line-height: 1.6; font-size: 16px; white-space: pre-wrap; margin: 0; }}
+            .footer {{ margin-top: 30px; font-size: 12px; color: #94a3b8; text-align: center; border-top: 1px solid #f0f0f0; padding-top: 15px; }}
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h2>✨ New Portfolio Message</h2>
+            
+            <div class="info-block">
+                <div class="info-item"><span class="info-label">Name:</span> <span class="info-value">{contact_data.name}</span></div>
+                <div class="info-item"><span class="info-label">Email:</span> <span class="info-value"><a href="mailto:{contact_data.email}" style="color: #00E5FF; text-decoration: none;">{contact_data.email}</a></span></div>
+                <div class="info-item"><span class="info-label">Subject:</span> <span class="info-value">{contact_data.subject}</span></div>
+            </div>
+
+            <div class="message-label">MESSAGE CONTENT:</div>
+            <div class="message-block">
+                <p class="message-content">{contact_data.message}</p>
+            </div>
+
+            <div class="footer">
+                Received on {timestamp} &bull; Client IP: {client_ip}
+            </div>
+        </div>
+    </body>
+    </html>
+    """
+    
+    msg.add_alternative(html_body, subtype='html')
 
     # Connect to Gmail SMTP securely and send
     await aiosmtplib.send(
