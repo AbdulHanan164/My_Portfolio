@@ -1,0 +1,1240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abdul Hanan — AI/ML Engineer | Production AI Systems Architect</title>
+  <meta name="description" content="Abdul Hanan is an AI/ML Engineer specializing in production AI systems, RAG pipelines, multimodal AI, scalable backend engineering, and cloud deployments." />
+  <meta property="og:title" content="Abdul Hanan — AI/ML Engineer" />
+  <meta property="og:description" content="Production AI Systems Architect specializing in RAG pipelines, LangChain, FastAPI, AWS, and multimodal AI." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== LOADING SCREEN ===== -->
+  <div id="loader" class="loader">
+    <div class="loader-inner">
+      <div class="loader-logo">
+        <span class="loader-initials">AH</span>
+        <div class="loader-ring"></div>
+        <div class="loader-ring loader-ring-2"></div>
+      </div>
+      <div class="loader-text">Initializing Systems<span class="loader-dots"></span></div>
+      <div class="loader-bar-wrap"><div class="loader-bar"></div></div>
+    </div>
+  </div>
+
+  <!-- ===== CANVAS BACKGROUND ===== -->
+  <canvas id="bgCanvas"></canvas>
+
+  <!-- ===== CURSOR ===== -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="nav" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo magnetic" id="navLogo">
+        <span class="logo-bracket">&lt;</span>AH<span class="logo-bracket">/&gt;</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" class="nav-link magnetic">About</a></li>
+        <li><a href="#skills" class="nav-link magnetic">Skills</a></li>
+        <li><a href="#projects" class="nav-link magnetic">Projects</a></li>
+        <li><a href="#experience" class="nav-link magnetic">Experience</a></li>
+        <li><a href="#architecture" class="nav-link magnetic">Architecture</a></li>
+        <li><a href="#contact" class="nav-link magnetic">Contact</a></li>
+      </ul>
+
+      <div class="nav-social">
+        <a href="https://github.com/AbdulHanan164" target="_blank" rel="noopener" class="nav-social-btn magnetic" aria-label="GitHub" id="navGithub">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+        </a>
+        <a href="https://linkedin.com/in/abdul-hanan-4bb30334a" target="_blank" rel="noopener" class="nav-social-btn magnetic" aria-label="LinkedIn" id="navLinkedin">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+      </div>
+      <a href="files (1)/AbdulHanan_CV_AIMLEngineer.pdf" download="AbdulHanan_CV_AIMLEngineer.pdf" class="nav-cta magnetic" id="navCta">Resume</a>
+      <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== MOBILE MENU ===== -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#about" class="mobile-nav-link">About</a></li>
+      <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
+      <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
+      <li><a href="#experience" class="mobile-nav-link">Experience</a></li>
+      <li><a href="#achievements" class="mobile-nav-link">Achievements</a></li>
+      <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero" id="hero">
+    <div class="hero-grid-overlay"></div>
+    <div class="hero-orbs">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-badge reveal-up">
+        <span class="badge-dot"></span>
+        Available for Work
+      </div>
+
+      <div class="hero-profile reveal-up">
+        <div class="profile-image-wrap">
+          <div class="profile-glow"></div>
+          <img src="profile.jpg" alt="Abdul Hanan" class="profile-image" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiB2aWV3Qm94PSIwIDAgMjQgMjQiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzg4OThCQiIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxjaXJjbGUgY3g9IjEyIiBjeT0iOCIgcj0iNSIvPjxwYXRoIGQ9Ik0yMCAyMXYtMmExIDEgMCAwMC0xLTFoLTE0YTEgMSAwIDAwLTEgMXYyIi8+PC9zdmc+'">
+        </div>
+      </div>
+
+      <h1 class="hero-name reveal-up">
+        <span class="name-line">ABDUL</span>
+        <span class="name-line name-hanan">HANAN</span>
+      </h1>
+      <div class="hero-role reveal-up">
+        <h2 class="role-static" id="roleCycler" style="cursor: pointer; position: relative; display: inline-block; margin: 0; font-size: inherit; font-weight: inherit; user-select: none;" title="Double click to change role">AI/ML Engineer</h2>
+        <span class="role-divider">|</span>
+        <span class="role-typed" id="typedText"></span><span class="type-cursor">_</span>
+      </div>
+      <p class="hero-desc reveal-up">
+        Building production-ready AI systems that scale. From RAG pipelines to multimodal architectures — turning cutting-edge research into real-world solutions.
+      </p>
+      <div class="hero-cta reveal-up">
+        <a href="#projects" class="btn btn-primary magnetic" id="viewProjectsBtn">
+          <span>View Projects</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="files (1)/AbdulHanan_CV_AIMLEngineer.pdf" download="AbdulHanan_CV_AIMLEngineer.pdf" class="btn btn-secondary magnetic" id="downloadResumeBtn">
+          <span>Download CV</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+        </a>
+        <a href="#contact" class="btn btn-ghost magnetic" id="contactBtn">Contact Me</a>
+      </div>
+      <div class="hero-stats reveal-up">
+        <div class="stat-item">
+          <span class="stat-num" data-count="350">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">LeetCode Problems</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num" data-count="4">0</span>
+          <span class="stat-label">Featured Projects</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num" data-count="50">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">ICPC Ranking</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="ai-orb-container">
+        <div class="ai-orb">
+          <div class="orb-core"></div>
+          <div class="orb-ring r1"></div>
+          <div class="orb-ring r2"></div>
+          <div class="orb-ring r3"></div>
+          <div class="orb-particles" id="orbParticles"></div>
+        </div>
+        <div class="floating-icons">
+          <div class="float-icon fi-1" title="Python">
+            <svg viewBox="0 0 128 128" width="26" height="26"><linearGradient id="pyGrad1" x1="70.252" y1="1237.476" x2="170.659" y2="1151.586" gradientUnits="userSpaceOnUse" gradientTransform="matrix(.563 0 0 -.568 -29.215 707.817)"><stop offset="0" stop-color="#5A9FD4"/><stop offset="1" stop-color="#306998"/></linearGradient><linearGradient id="pyGrad2" x1="209.474" y1="1098.811" x2="173.62" y2="1149.537" gradientUnits="userSpaceOnUse" gradientTransform="matrix(.563 0 0 -.568 -29.215 707.817)"><stop offset="0" stop-color="#FFD43B"/><stop offset="1" stop-color="#FFE873"/></linearGradient><path fill="url(#pyGrad1)" d="M63.391 1.988c-4.222.02-8.252.379-11.8 1.007-10.45 1.846-12.346 5.71-12.346 12.837v9.411h24.693v3.137H29.977c-7.176 0-13.46 4.313-15.426 12.521-2.268 9.405-2.368 15.275 0 25.096 1.755 7.311 5.947 12.519 13.124 12.519h8.491V67.234c0-8.151 7.051-15.34 15.426-15.34h24.665c6.866 0 12.346-5.654 12.346-12.548V15.833c0-6.693-5.646-11.72-12.346-12.837-4.244-.706-8.645-1.027-12.866-1.008zM50.037 9.557c2.55 0 4.634 2.117 4.634 4.721 0 2.593-2.083 4.69-4.634 4.69-2.56 0-4.633-2.097-4.633-4.69-.001-2.604 2.073-4.721 4.633-4.721z"/><path fill="url(#pyGrad2)" d="M91.682 28.38v10.966c0 8.5-7.208 15.655-15.426 15.655H51.591c-6.756 0-12.346 5.783-12.346 12.549v23.515c0 6.691 5.818 10.628 12.346 12.547 7.816 2.297 15.312 2.713 24.665 0 6.216-1.801 12.346-5.423 12.346-12.547v-9.412H63.938v-3.138h37.012c7.176 0 9.852-5.005 12.348-12.519 2.578-7.735 2.467-15.174 0-25.096-1.774-7.145-5.161-12.521-12.348-12.521h-9.268zM77.809 87.927c2.561 0 4.634 2.097 4.634 4.692 0 2.602-2.074 4.719-4.634 4.719-2.55 0-4.633-2.117-4.633-4.719 0-2.595 2.083-4.692 4.633-4.692z"/></svg>
+          </div>
+          <div class="float-icon fi-2" title="LangChain">
+            <svg viewBox="0 0 40 40" width="26" height="26" fill="none"><rect width="40" height="40" rx="8" fill="#1C3A3A"/><path d="M8 20c0-6.627 5.373-12 12-12s12 5.373 12 12" stroke="#00D4AA" stroke-width="2.5" stroke-linecap="round"/><path d="M20 8v4M20 28v4M8 20h4M28 20h4" stroke="#00D4AA" stroke-width="2" stroke-linecap="round"/><circle cx="20" cy="20" r="4" fill="#00D4AA"/></svg>
+          </div>
+          <div class="float-icon fi-3" title="AWS">
+            <svg viewBox="0 0 40 40" width="26" height="26" fill="none"><rect width="40" height="40" rx="8" fill="#232F3E"/><path d="M12 24c0 0 1-4 8-4s8 4 8 4" stroke="#FF9900" stroke-width="2" stroke-linecap="round"/><path d="M7 28l3-2M33 28l-3-2" stroke="#FF9900" stroke-width="2" stroke-linecap="round"/><ellipse cx="20" cy="18" rx="6" ry="3" stroke="#FF9900" stroke-width="2"/><path d="M14 18v4M26 18v4" stroke="#FF9900" stroke-width="1.5"/></svg>
+          </div>
+          <div class="float-icon fi-4" title="Vector DB">
+            <svg viewBox="0 0 40 40" width="26" height="26" fill="none"><rect width="40" height="40" rx="8" fill="#0D1B2A"/><circle cx="12" cy="14" r="3" fill="#00A8FF"/><circle cx="28" cy="14" r="3" fill="#7B5EA7"/><circle cx="20" cy="26" r="3" fill="#06B6D4"/><line x1="15" y1="14" x2="25" y2="14" stroke="#00A8FF" stroke-width="1.5"/><line x1="14" y1="16" x2="19" y2="24" stroke="#7B5EA7" stroke-width="1.5"/><line x1="26" y1="16" x2="21" y2="24" stroke="#06B6D4" stroke-width="1.5"/></svg>
+          </div>
+          <div class="float-icon fi-5" title="Docker">
+            <svg viewBox="0 0 40 40" width="26" height="26" fill="none"><rect width="40" height="40" rx="8" fill="#003F8A"/><path d="M8 22c1.5-3 5-3 7 0" stroke="#2496ED" stroke-width="1.5" stroke-linecap="round"/><rect x="11" y="14" width="4" height="3" rx="0.5" fill="#2496ED"/><rect x="16" y="14" width="4" height="3" rx="0.5" fill="#2496ED"/><rect x="21" y="14" width="4" height="3" rx="0.5" fill="#2496ED"/><rect x="16" y="10" width="4" height="3" rx="0.5" fill="#2496ED"/><rect x="21" y="10" width="4" height="3" rx="0.5" fill="#2496ED"/><path d="M29 17c1 0 3 1 3 3H10c0-2 2-3 4-3" stroke="#2496ED" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <div class="float-icon fi-6" title="FastAPI">
+            <svg viewBox="0 0 40 40" width="26" height="26" fill="none"><rect width="40" height="40" rx="8" fill="#0A1628"/><circle cx="20" cy="20" r="10" stroke="#009688" stroke-width="2"/><path d="M17 14l-3 7h6l-3 8" stroke="#009688" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-indicator">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag reveal-up">01 / About</span>
+        <h2 class="section-title reveal-up">Who I Am</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text reveal-left">
+          <p class="about-lead">
+            I'm an <span class="highlight">AI/ML Engineer</span> with hands-on experience building and deploying production-ready AI systems that actually work at scale.
+          </p>
+          <p class="about-body">
+            My work spans the full AI engineering stack — from designing intelligent <span class="highlight">RAG pipelines</span> and <span class="highlight">LangChain</span> agents to shipping containerized microservices with <span class="highlight">FastAPI</span> and <span class="highlight">Docker</span> on <span class="highlight">AWS</span>. I bridge the gap between research and production with a strong focus on performance, reliability, and scalability.
+          </p>
+          <p class="about-body">
+            I've worked extensively with vector databases including <span class="highlight">FAISS</span>, <span class="highlight">pgvector</span>, and <span class="highlight">Neo4j</span> for knowledge graph architectures. My multimodal AI work covers vision-language models, CLIP embeddings, and AI-generated recommendations — deployed on real infrastructure for real users.
+          </p>
+          <div class="about-tags">
+            <span class="tag">RAG Pipelines</span>
+            <span class="tag">LangChain</span>
+            <span class="tag">FastAPI</span>
+            <span class="tag">Docker</span>
+            <span class="tag">AWS</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">FAISS</span>
+            <span class="tag">pgvector</span>
+            <span class="tag">Neo4j</span>
+            <span class="tag">Multimodal AI</span>
+            <span class="tag">PyTorch</span>
+            <span class="tag">CI/CD</span>
+          </div>
+        </div>
+        <div class="about-card-wrap reveal-right">
+          <div class="about-card glass-card">
+            <div class="about-card-header">
+              <div class="acard-dot green"></div>
+              <div class="acard-dot yellow"></div>
+              <div class="acard-dot red"></div>
+              <span class="acard-title">ai_engineer.py</span>
+            </div>
+            <div class="code-block">
+              <pre><code><span class="c-keyword">class</span> <span class="c-class">AbdulHanan</span>:
+  <span class="c-string">"""AI/ML Engineer"""</span>
+
+  <span class="c-attr">name</span> = <span class="c-string">"Abdul Hanan"</span>
+  <span class="c-attr">role</span> = <span class="c-string">"AI/ML Engineer"</span>
+
+  <span class="c-attr">expertise</span> = [
+    <span class="c-string">"RAG Pipelines"</span>,
+    <span class="c-string">"AI Agents"</span>,
+    <span class="c-string">"Multimodal AI"</span>,
+    <span class="c-string">"Backend Engineering"</span>,
+    <span class="c-string">"Cloud Infrastructure"</span>,
+  ]
+
+  <span class="c-attr">stack</span> = {
+    <span class="c-string">"AI"</span>: [<span class="c-string">"LangChain"</span>, <span class="c-string">"PyTorch"</span>],
+    <span class="c-string">"Backend"</span>: [<span class="c-string">"FastAPI"</span>, <span class="c-string">"Docker"</span>],
+    <span class="c-string">"Data"</span>: [<span class="c-string">"FAISS"</span>, <span class="c-string">"Neo4j"</span>],
+    <span class="c-string">"Cloud"</span>: [<span class="c-string">"AWS EC2"</span>, <span class="c-string">"S3"</span>],
+  }
+
+  <span class="c-keyword">def</span> <span class="c-fn">solve</span>(<span class="c-kw2">self</span>, problem):
+    <span class="c-keyword">return</span> <span class="c-kw2">self</span>.build_ai(problem)
+</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS SECTION ===== -->
+  <section class="section skills" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag reveal-up">02 / Skills</span>
+        <h2 class="section-title reveal-up">Tech Arsenal</h2>
+        <p class="section-sub reveal-up">The tools I use to build production AI systems</p>
+      </div>
+
+      <div class="skills-categories reveal-up">
+        <button class="skill-cat-btn active" data-cat="all">All</button>
+        <button class="skill-cat-btn" data-cat="ai">AI/ML</button>
+        <button class="skill-cat-btn" data-cat="backend">Backend</button>
+        <button class="skill-cat-btn" data-cat="data">Data/DB</button>
+        <button class="skill-cat-btn" data-cat="cloud">Cloud/DevOps</button>
+      </div>
+
+      <div class="skills-grid" id="skillsGrid">
+        <!-- AI/ML -->
+        <div class="skill-card glass-card" data-cat="ai" data-reveal>
+          <div class="skill-icon skill-icon-svg">
+            <svg viewBox="0 0 32 32" width="32" height="32"><circle cx="16" cy="16" r="14" fill="#EE4C2C" opacity="0.15"/><path d="M16 6l2 6h6l-5 4 2 6-5-4-5 4 2-6-5-4h6z" fill="#EE4C2C"/><text x="16" y="28" text-anchor="middle" font-size="6" fill="#EE4C2C" font-family="monospace">PyTorch</text></svg>
+          </div>
+          <h3 class="skill-name">PyTorch</h3>
+          <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+          <span class="skill-level">Advanced</span>
+        </div>
+        <div class="skill-card glass-card" data-cat="ai" data-reveal>
+          <div class="skill-icon skill-icon-svg">
+            <svg viewBox="0 0 32 32" width="32" height="32"><circle cx="16" cy="16" r="14" fill="#FF6F00" opacity="0.15"/><path d="M16 4L4 28h24L16 4z" fill="none" stroke="#FF6F00" stroke-width="2"/><path d="M11 20l5-10 5 10" fill="none" stroke="#FF6F00" stroke-width="1.5"/></svg>
+          </div>
+          <h3 class="skill-name">TensorFlow</h3>
+          <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+          <span class="skill-level">Advanced</span>
+        </div>
+        <div class="skill-card glass-card" data-cat="ai" data-reveal id="skill-langchain">
+          <div class="skill-icon skill-icon-svg">
+            <svg viewBox="0 0 32 32" width="32" height="32"><circle cx="16" cy="16" r="14" fill="#00D4AA" opacity="0.15"/><path d="M8 20c0-4.4 3.6-8 8-8s8 3.6 8 8" stroke="#00D4AA" stroke-width="2" stroke-linecap="round" fill="none"/><circle cx="16" cy="12" r="2.5" fill="#00D4AA"/><path d="M8 24h16" stroke="#00D4AA" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3 class="skill-name">LangChain</h3>
+          <div class="skill-bar"><div class="skill-fill" data-width="92"></div></div>
+          <span class="skill-level">Expert</span>
+        </div>
+        <div class="skill-card glass-card" data-cat="ai" data-reveal>
+          <div class="skill-icon skill-icon-svg">
+            <svg viewBox="0 0 32 32" width="32" height="32"><circle cx="16" cy="16" r="14" fill="#7C3AED" opacity="0.15"/><circle cx="16" cy="16" r="5" fill="none" stroke="#7C3AED" stroke-width="2"/><path d="M16 8v-3M16 27v-3M8 16H5M27 16h-3" stroke="#7C3AED" stroke-width="1.5" stroke-linecap="round"/><path d="M10.3 10.3l-2.1-2.1M23.8 23.8l-2.1-2.1M10.3 21.7l-2.1 2.1M23.8 8.2l-2.1 2.1" stroke="#7C3AED" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3 class="skill-name">AI Agents</h3>
+          <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+          <span class="skill-level">Advanced</span>
+        </div>
+        <div class="skill-card glass-card" data-cat="ai" data-reveal>
+          <div class="skill-icon skill-icon-svg">
+            <svg viewBox="0 0 32 32" width="32" height="32"><circle cx="16" cy="16" r="14" fill="#00A8FF" opacity="0.15"/><path d="M8 22V16a8 8 0 0116 0v6" stroke="#00A8FF" stroke-width="2" fill="none" stroke-linecap="round"/><rect x="11" y="20" width="10" height="6" rx="2" fill="#00A8FF" opacity="0.8"/><circle cx="16" cy="10" r="2" fill="#00A8FF"/></svg>
+          </div>
+          <h3 class="skill-name">RAG Systems</h3>
+          <div class="skill-bar"><div class="skill-fill" data-width="93"></div></div>
+          <span class="skill-level">Expert</span>
+        </div>
+        <!-- Backend -->
+        <div class="skill-card glass-card" data-cat="backend" data-reveal id="skill-python">
+          <div class="skill-icon skill-icon-svg">
+            <svg viewBox="0 0 32 32" width="32" height="32"><linearGradient id="sk-py1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#306998"/><stop offset="1" stop-color="#5A9FD4"/></linearGradient><linearGradient id="sk-py2" x1="1" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFD43B"/><stop offset="1" stop-color="#FFE873"/></linearGradient><circle cx="16" cy="16" r="14" fill="#306998" opacity="0.15"/><path fill="url(#sk-py1)" d="M15.6 5c-2.1 0-4 .9-4 2v1.5h4v.5H9.5C8.1 9 7 10.3 7 12.5s1 4 2.5 4H11v-2c0-1.7 1.4-3 3-3h5c1.1 0 2-.9 2-2V7c0-1.1-1.4-2-3-2h-2.4zM13 7c.6 0 1 .4 1 1s-.4 1-1 1-1-.4-1-1 .4-1 1-1z"/><path fill="url(#sk-py2)" d="M21 12v2c0 1.7-1.4 3-3 3h-5c-1.1 0-2 .9-2 2v3.5c0 1.1 1.4 2 3 2h2.4c2.1 0 4-.9 4-2V21h-4v-.5h6.1c1.4 0 2.5-1.3 2.5-3.5s-1-4-2.5-4H21zm-3.6 10c.6 0 1 .4 1 1s-.4 1-1 1-1-.4-1-1 .4-1 1-1z"/></svg>
+          </div>
+          <h3 class="skill-name">Python</h3>
+          <div class="skill-bar"><div class="skill-fill" data-width="95"></div></div>
+          <span class="skill-level">Expert</span>
+        </div>
+        <div class="skill-card glass-card" data-cat="backend" data-reveal id="skill-fastapi">
+          <div class="skill-icon skill-icon-svg">
+            <svg viewBox="0 0 32 32" width="32" height="32"><circle cx="16" cy="16" r="14" fill="#009688" opacity="0.15"/><circle cx="16" cy="16" r="9" fill="none" stroke="#009688" stroke-width="2"/><path d="M14 12l-3 5h5l-3 7" stroke="#009688" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+          </div>
+          <h3 class="skill-name">FastAPI</h3>
+          <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+          <span class="skill-level">Expert</span>
+        </div>
+        <div class="skill-card glass-card" data-cat="backend" data-reveal id="skill-react">
+          <div class="skill-icon skill-icon-svg">
+            <svg viewBox="0 0 32 32" width="32" height="32"><circle cx="16" cy="16" r="14" fill="#61DAFB" opacity="0.15"/><circle cx="16" cy="16" r="3" fill="#61DAFB"/><ellipse cx="16" cy="16" rx="12" ry="4.5" fill="none" stroke="#61DAFB" stroke-width="1.5"/><ellipse cx="16" cy="16" rx="12" ry="4.5" fill="none" stroke="#61DAFB" stroke-width="1.5" transform="rotate(60 16 16)"/><ellipse cx="16" cy="16" rx="12" ry="4.5" fill="none" stroke="#61DAFB" stroke-width="1.5" transform="rotate(120 16 16)"/></svg>
+          </div>
+          <h3 class="skill-name">React</h3>
+          <div class="skill-bar"><div class="skill-fill" data-width="78"></div></div>
+          <span class="skill-level">Intermediate</span>
+        </div>
+        <!-- Data/DB -->
+        <div class="skill-card glass-card" data-cat="data" data-reveal>
+          <div class="skill-icon skill-icon-svg">
+            <svg viewBox="0 0 32 32" width="32" height="32"><circle cx="16" cy="16" r="14" fill="#00A8FF" opacity="0.15"/><circle cx="10" cy="12" r="2.5" fill="#00A8FF"/><circle cx="22" cy="12" r="2.5" fill="#7B5EA7"/><circle cx="16" cy="22" r="2.5" fill="#06B6D4"/><line x1="12.5" y1="12" x2="19.5" y2="12" stroke="#00A8FF" stroke-width="1.5"/><line x1="11" y1="14" x2="15" y2="20" stroke="#7B5EA7" stroke-width="1.5"/><line x1="21" y1="14" x2="17" y2="20" stroke="#06B6D4" stroke-width="1.5"/></svg>
+          </div>
+          <h3 class="skill-name">FAISS</h3>
+          <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+          <span class="skill-level">Advanced</span>
+        </div>
+        <div class="skill-card glass-card" data-cat="data" data-reveal id="skill-postgres">
+          <div class="skill-icon skill-icon-svg">
+            <svg viewBox="0 0 32 32" width="32" height="32"><circle cx="16" cy="16" r="14" fill="#336791" opacity="0.15"/><ellipse cx="16" cy="10" rx="9" ry="3" fill="none" stroke="#336791" stroke-width="1.8"/><path d="M7 10v5c0 1.7 4 3 9 3s9-1.3 9-3V10" fill="none" stroke="#336791" stroke-width="1.8"/><path d="M7 15v5c0 1.7 4 3 9 3s9-1.3 9-3V15" fill="none" stroke="#336791" stroke-width="1.8"/></svg>
+          </div>
+          <h3 class="skill-name">PostgreSQL</h3>
+          <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+          <span class="skill-level">Advanced</span>
+        </div>
+        <div class="skill-card glass-card" data-cat="data" data-reveal>
+          <div class="skill-icon skill-icon-svg">
+            <svg viewBox="0 0 32 32" width="32" height="32"><circle cx="16" cy="16" r="14" fill="#0A9CDD" opacity="0.15"/><circle cx="16" cy="16" r="4" fill="#0A9CDD"/><circle cx="8" cy="10" r="2.5" fill="#0A9CDD" opacity="0.7"/><circle cx="24" cy="10" r="2.5" fill="#0A9CDD" opacity="0.7"/><circle cx="8" cy="22" r="2.5" fill="#0A9CDD" opacity="0.7"/><circle cx="24" cy="22" r="2.5" fill="#0A9CDD" opacity="0.7"/><line x1="10.5" y1="11.5" x2="14" y2="14" stroke="#0A9CDD" stroke-width="1.5"/><line x1="21.5" y1="11.5" x2="18" y2="14" stroke="#0A9CDD" stroke-width="1.5"/><line x1="10.5" y1="20.5" x2="14" y2="18" stroke="#0A9CDD" stroke-width="1.5"/><line x1="21.5" y1="20.5" x2="18" y2="18" stroke="#0A9CDD" stroke-width="1.5"/></svg>
+          </div>
+          <h3 class="skill-name">Neo4j</h3>
+          <div class="skill-bar"><div class="skill-fill" data-width="82"></div></div>
+          <span class="skill-level">Advanced</span>
+        </div>
+        <div class="skill-card glass-card" data-cat="data" data-reveal id="skill-vectordb">
+          <div class="skill-icon skill-icon-svg">
+            <svg viewBox="0 0 32 32" width="32" height="32"><circle cx="16" cy="16" r="14" fill="#06B6D4" opacity="0.15"/><rect x="8" y="9" width="7" height="6" rx="1" fill="none" stroke="#06B6D4" stroke-width="1.5"/><rect x="17" y="9" width="7" height="6" rx="1" fill="none" stroke="#06B6D4" stroke-width="1.5"/><rect x="8" y="17" width="7" height="6" rx="1" fill="none" stroke="#06B6D4" stroke-width="1.5"/><rect x="17" y="17" width="7" height="6" rx="1" fill="none" stroke="#06B6D4" stroke-width="1.5"/></svg>
+          </div>
+          <h3 class="skill-name">Vector DBs</h3>
+          <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+          <span class="skill-level">Expert</span>
+        </div>
+        <!-- Cloud/DevOps -->
+        <div class="skill-card glass-card" data-cat="cloud" data-reveal id="skill-docker">
+          <div class="skill-icon skill-icon-svg">
+            <svg viewBox="0 0 32 32" width="32" height="32"><circle cx="16" cy="16" r="14" fill="#2496ED" opacity="0.15"/><rect x="10" y="13" width="4" height="3" rx="0.5" fill="#2496ED"/><rect x="15" y="13" width="4" height="3" rx="0.5" fill="#2496ED"/><rect x="20" y="13" width="4" height="3" rx="0.5" fill="#2496ED"/><rect x="15" y="9" width="4" height="3" rx="0.5" fill="#2496ED"/><rect x="20" y="9" width="4" height="3" rx="0.5" fill="#2496ED"/><path d="M9 21c1-3 14-3 15 0" stroke="#2496ED" stroke-width="1.5" stroke-linecap="round" fill="none"/></svg>
+          </div>
+          <h3 class="skill-name">Docker</h3>
+          <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+          <span class="skill-level">Advanced</span>
+        </div>
+        <div class="skill-card glass-card" data-cat="cloud" data-reveal id="skill-aws">
+          <div class="skill-icon skill-icon-svg">
+            <svg viewBox="0 0 32 32" width="32" height="32"><circle cx="16" cy="16" r="14" fill="#FF9900" opacity="0.15"/><path d="M9 21c0 0 .5-3.5 7-3.5s7 3.5 7 3.5" stroke="#FF9900" stroke-width="1.8" stroke-linecap="round" fill="none"/><path d="M6 25l2.5-1.5M26 25l-2.5-1.5" stroke="#FF9900" stroke-width="1.5" stroke-linecap="round"/><ellipse cx="16" cy="15" rx="5" ry="2.5" fill="none" stroke="#FF9900" stroke-width="1.8"/><path d="M11 15v3M21 15v3" stroke="#FF9900" stroke-width="1.3"/></svg>
+          </div>
+          <h3 class="skill-name">AWS</h3>
+          <div class="skill-bar"><div class="skill-fill" data-width="83"></div></div>
+          <span class="skill-level">Advanced</span>
+        </div>
+        <div class="skill-card glass-card" data-cat="cloud" data-reveal id="skill-cicd">
+          <div class="skill-icon skill-icon-svg">
+            <svg viewBox="0 0 32 32" width="32" height="32"><circle cx="16" cy="16" r="14" fill="#F05032" opacity="0.15"/><circle cx="16" cy="16" r="6" fill="none" stroke="#F05032" stroke-width="2"/><path d="M16 10V7M16 25v-3M10 16H7M25 16h-3" stroke="#F05032" stroke-width="1.5" stroke-linecap="round"/><circle cx="16" cy="16" r="2.5" fill="#F05032"/></svg>
+          </div>
+          <h3 class="skill-name">CI/CD</h3>
+          <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+          <span class="skill-level">Advanced</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS SECTION ===== -->
+  <section class="section projects" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag reveal-up">03 / Projects</span>
+        <h2 class="section-title reveal-up">Featured Work</h2>
+        <p class="section-sub reveal-up">Production AI systems built for the real world</p>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Project 1: Doctor Path AI -->
+        <div class="project-card glass-card featured reveal-up" id="proj-doctorpath">
+          <div class="proj-glow proj-glow-blue"></div>
+          <div class="proj-header">
+            <div class="proj-icon-wrap">
+              <svg class="proj-icon-svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00A8FF" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            </div>
+            <div class="proj-meta">
+              <span class="proj-tag featured-tag">Featured</span>
+              <span class="proj-tag">Clinical AI</span>
+            </div>
+          </div>
+          <h3 class="proj-title">Doctor Path AI</h3>
+          <p class="proj-desc">Clinical decision-support system powered by multimodal retrieval pipelines. Integrates FAISS vector search, Neo4j knowledge graphs, pgvector semantic similarity, and Google's MedGemma model to generate AI-driven treatment recommendations with source citations.</p>
+          <div class="proj-arch">
+            <div class="arch-node">Query</div>
+            <div class="arch-arrow">→</div>
+            <div class="arch-node highlight-node">RAG Pipeline</div>
+            <div class="arch-arrow">→</div>
+            <div class="arch-node">MedGemma</div>
+            <div class="arch-arrow">→</div>
+            <div class="arch-node">Diagnosis</div>
+          </div>
+          <div class="proj-db-row">
+            <span class="db-badge">FAISS</span>
+            <span class="db-badge">Neo4j</span>
+            <span class="db-badge">pgvector</span>
+            <span class="db-badge">MedGemma</span>
+          </div>
+          <div class="proj-stack">
+            <span class="stack-tag">Python</span>
+            <span class="stack-tag">FastAPI</span>
+            <span class="stack-tag">LangChain</span>
+            <span class="stack-tag">Docker</span>
+            <span class="stack-tag">AWS</span>
+            <span class="stack-tag">PostgreSQL</span>
+          </div>
+          <div class="proj-footer">
+            <div class="proj-graph-anim" id="graphAnim"></div>
+          </div>
+        </div>
+
+        <!-- Project 2: APD Listener Tool -->
+        <div class="project-card glass-card reveal-up" id="proj-apd">
+          <div class="proj-glow proj-glow-purple"></div>
+          <div class="proj-header">
+            <div class="proj-icon-wrap">
+              <svg class="proj-icon-svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#7B5EA7" stroke-width="1.5"><path d="M12 2a3 3 0 0 1 3 3v7a3 3 0 0 1-6 0V5a3 3 0 0 1 3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="22"/><line x1="8" y1="22" x2="16" y2="22"/></svg>
+            </div>
+            <div class="proj-meta">
+              <span class="proj-tag">Audio AI</span>
+              <span class="proj-tag">Voice Control</span>
+            </div>
+          </div>
+          <h3 class="proj-title">APD Listener Tool</h3>
+          <p class="proj-desc">AI-powered podcast processor that converts audio to structured instructions. Features voice-controlled workflow navigation using natural language commands ("rehear", "next", "back") with real-time audio processing and cloud storage.</p>
+          <div class="waveform-container">
+            <div class="waveform" id="waveform">
+              <div class="wave-bars" id="waveBars"></div>
+            </div>
+            <div class="waveform-controls">
+              <span class="wave-cmd">rehear</span>
+              <span class="wave-cmd active-cmd">next</span>
+              <span class="wave-cmd">back</span>
+            </div>
+          </div>
+          <div class="proj-stack">
+            <span class="stack-tag">React</span>
+            <span class="stack-tag">FastAPI</span>
+            <span class="stack-tag">Docker</span>
+            <span class="stack-tag">AWS EC2</span>
+            <span class="stack-tag">AWS S3</span>
+            <span class="stack-tag">Nginx</span>
+          </div>
+        </div>
+
+        <!-- Project 3: Tradie Migration App -->
+        <div class="project-card glass-card reveal-up" id="proj-tradie">
+          <div class="proj-glow proj-glow-cyan"></div>
+          <div class="proj-header">
+            <div class="proj-icon-wrap">
+              <svg class="proj-icon-svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#06B6D4" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </div>
+            <div class="proj-meta">
+              <span class="proj-tag">RAG Platform</span>
+              <span class="proj-tag">Full Stack</span>
+            </div>
+          </div>
+          <h3 class="proj-title">Tradie Migration App</h3>
+          <p class="proj-desc">AI-powered migration platform that uses LangChain RAG pipelines to match skilled tradespeople with employers. Features JWT authentication, role-based access control, and intelligent candidate-employer matching with contextual AI recommendations.</p>
+          <div class="workflow-diagram">
+            <div class="wf-node">Candidate</div>
+            <div class="wf-line"></div>
+            <div class="wf-node wf-center">AI Matcher</div>
+            <div class="wf-line"></div>
+            <div class="wf-node">Employer</div>
+          </div>
+          <div class="proj-stack">
+            <span class="stack-tag">LangChain</span>
+            <span class="stack-tag">FastAPI</span>
+            <span class="stack-tag">JWT</span>
+            <span class="stack-tag">RBAC</span>
+            <span class="stack-tag">PostgreSQL</span>
+            <span class="stack-tag">Docker</span>
+          </div>
+        </div>
+
+        <!-- Project 4: Hybrid Recommendation System -->
+        <div class="project-card glass-card reveal-up" id="proj-recsys">
+          <div class="proj-glow proj-glow-green"></div>
+          <div class="proj-header">
+            <div class="proj-icon-wrap">
+              <svg class="proj-icon-svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+            </div>
+            <div class="proj-meta">
+              <span class="proj-tag">RecSys</span>
+              <span class="proj-tag">Multimodal</span>
+            </div>
+          </div>
+          <h3 class="proj-title">Hybrid Recommendation System</h3>
+          <p class="proj-desc">Production multimodal recommendation engine combining CLIP image embeddings with MiniLM text embeddings. Dual-index FAISS + Annoy similarity search delivers sub-millisecond retrieval with hybrid ranking across visual and semantic dimensions.</p>
+          <div class="rec-flow">
+            <div class="rec-stream">
+              <div class="rec-node">Image</div>
+              <div class="rec-arrow-sm">→</div>
+              <div class="rec-node">CLIP</div>
+            </div>
+            <div class="rec-merge">⊕</div>
+            <div class="rec-stream">
+              <div class="rec-node">Text</div>
+              <div class="rec-arrow-sm">→</div>
+              <div class="rec-node">MiniLM</div>
+            </div>
+            <div class="rec-out">
+              <div class="rec-arrow-sm">→</div>
+              <div class="rec-node rec-final">FAISS/Annoy</div>
+            </div>
+          </div>
+          <div class="proj-stack">
+            <span class="stack-tag">CLIP</span>
+            <span class="stack-tag">MiniLM</span>
+            <span class="stack-tag">FAISS</span>
+            <span class="stack-tag">Annoy</span>
+            <span class="stack-tag">Python</span>
+            <span class="stack-tag">FastAPI</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EXPERIENCE SECTION ===== -->
+  <section class="section experience" id="experience">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag reveal-up">04 / Experience</span>
+        <h2 class="section-title reveal-up">My Journey</h2>
+        <p class="section-sub reveal-up">A track record of shipping production AI — from research to deployment</p>
+      </div>
+
+      <!-- Track Selector -->
+      <div class="exp-selector reveal-up">
+        <button class="exp-track-btn active" data-track="all">All Roles</button>
+        <button class="exp-track-btn" data-track="engineering">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          Engineering
+        </button>
+        <button class="exp-track-btn" data-track="teaching">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          Teaching
+        </button>
+        <button class="exp-track-btn" data-track="freelance">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          Freelance
+        </button>
+      </div>
+
+      <div class="exp-timeline" id="expTimeline">
+
+        <!-- Rail line -->
+        <div class="exp-timeline-rail">
+          <div class="exp-rail-fill" id="expRailFill"></div>
+        </div>
+
+        <!-- ═══ CARD 1a: COGNARA — ENGINEERING ═══ -->
+        <div class="exp-item exp-featured reveal-up" data-track="engineering" id="expCognaraEng">
+          <div class="exp-node exp-node-active">
+            <div class="exp-node-core"></div>
+            <div class="exp-node-ring"></div>
+            <div class="exp-node-ring exp-node-ring-2"></div>
+          </div>
+          <div class="exp-card glass-card exp-card-standard">
+            <div class="exp-card-grid"></div>
+            <div class="exp-card-beam"></div>
+
+            <div class="exp-card-header">
+              <div class="exp-company-block">
+                <div class="exp-company-logo">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                </div>
+                <div>
+                  <h3 class="exp-role">AI/ML Engineer</h3>
+                  <div class="exp-company-row">
+                    <span class="exp-company-name">Cognara Training</span>
+                    <span class="exp-company-dot">·</span>
+                    <span class="exp-contract-badge">6-Month Contract</span>
+                  </div>
+                </div>
+              </div>
+              <div class="exp-meta-right">
+                <span class="exp-date-badge">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                  2024 – 2025
+                </span>
+                <div class="exp-status-live">
+                  <span class="exp-status-dot"></span>
+                  Recent
+                </div>
+              </div>
+            </div>
+
+            <!-- Engineering-only: Terminal + bullets + tech stack -->
+            <div class="exp-terminal">
+              <div class="exp-terminal-header">
+                <div class="exp-term-dots">
+                  <span class="etd etd-r"></span><span class="etd etd-y"></span><span class="etd etd-g"></span>
+                </div>
+                <span class="exp-term-title">production_deploy.sh</span>
+                <span class="exp-term-status">● running</span>
+              </div>
+              <div class="exp-terminal-body">
+                <div class="term-line"><span class="term-prompt">$</span> <span class="term-cmd">docker compose up --build apd-listener</span></div>
+                <div class="term-line term-success"><span class="term-out">✓ FastAPI service: port 8000 ready</span></div>
+                <div class="term-line term-success"><span class="term-out">✓ AWS EC2: tradie-platform deployed</span></div>
+                <div class="term-line term-info"><span class="term-out">→ RAG pipeline: pgvector index built</span></div>
+                <div class="term-line term-info"><span class="term-out">→ Nginx proxy: SSL active</span></div>
+                <div class="term-line"><span class="term-prompt">$</span> <span class="term-cursor-blink">_</span></div>
+              </div>
+            </div>
+
+            <ul class="exp-bullets exp-bullets-compact">
+              <li class="exp-bullet"><div class="bullet-icon bullet-blue"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><span>Built the <strong>APD Listener Tool</strong> — AI podcast-to-instruction pipeline with voice navigation commands deployed on AWS EC2</span></li>
+              <li class="exp-bullet"><div class="bullet-icon bullet-purple"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><span>Engineered <strong>Tradie Migration Platform</strong> with LangChain RAG pipelines, JWT auth, RBAC, and intelligent AI matching engine</span></li>
+              <li class="exp-bullet"><div class="bullet-icon bullet-cyan"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><span>Architected scalable <strong>FastAPI microservices</strong> with async processing, vector DB integrations, and cloud-native retrieval systems</span></li>
+              <li class="exp-bullet"><div class="bullet-icon bullet-blue"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><span>Deployed Dockerized AI stacks on <strong>AWS EC2</strong> behind Nginx with CI/CD pipelines, health monitoring, and auto-scaling configs</span></li>
+              <li class="exp-bullet"><div class="bullet-icon bullet-purple"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><span>Integrated <strong>voice processing workflows</strong> — real-time audio transcription, command recognition, and cloud storage pipelines</span></li>
+            </ul>
+
+            <div class="exp-tech-strip">
+              <span class="exp-chip exp-chip-blue">FastAPI</span>
+              <span class="exp-chip exp-chip-purple">LangChain</span>
+              <span class="exp-chip exp-chip-cyan">Docker</span>
+              <span class="exp-chip exp-chip-blue">AWS EC2</span>
+              <span class="exp-chip exp-chip-purple">PostgreSQL</span>
+              <span class="exp-chip exp-chip-cyan">RAG</span>
+              <span class="exp-chip exp-chip-blue">Vector DBs</span>
+              <span class="exp-chip exp-chip-purple">Nginx</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ═══ CARD 1b: COGNARA — TEACHING ═══ -->
+        <div class="exp-item reveal-up" data-track="teaching" id="expCognaraTeach">
+          <div class="exp-node">
+            <div class="exp-node-core exp-node-core-green"></div>
+            <div class="exp-node-ring exp-node-ring-green"></div>
+          </div>
+          <div class="exp-card glass-card exp-card-standard">
+            <div class="exp-card-beam exp-card-beam-green"></div>
+
+            <div class="exp-card-header">
+              <div class="exp-company-block">
+                <div class="exp-company-logo exp-logo-green">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                </div>
+                <div>
+                  <h3 class="exp-role">Python Instructor</h3>
+                  <div class="exp-company-row">
+                    <span class="exp-company-name">Cognara Training</span>
+                    <span class="exp-company-dot">·</span>
+                    <span class="exp-contract-badge">6-Month Contract</span>
+                  </div>
+                </div>
+              </div>
+              <span class="exp-date-badge">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                2024 – 2025
+              </span>
+            </div>
+
+            <!-- Teaching-only: Code window + curriculum -->
+            <div class="exp-code-window">
+              <div class="exp-code-header">
+                <div class="exp-term-dots">
+                  <span class="etd etd-r"></span><span class="etd etd-y"></span><span class="etd etd-g"></span>
+                </div>
+                <span class="exp-term-title">lesson_01_python.py</span>
+              </div>
+              <div class="exp-code-body">
+<pre><code><span class="c-keyword">class</span> <span class="c-class">PythonCourse</span>:
+  <span class="c-attr">curriculum</span> = [
+    <span class="c-string">"Fundamentals &amp; OOP"</span>,
+    <span class="c-string">"Automation Scripts"</span>,
+    <span class="c-string">"Web Scraping"</span>,
+    <span class="c-string">"APIs &amp; Backend"</span>,
+    <span class="c-string">"AI/ML Concepts"</span>,
+  ]
+  <span class="c-attr">students</span> = <span class="c-string">"International"</span>
+  <span class="c-attr">level</span> = <span class="c-string">"Beginner → Advanced"</span></code></pre>
+              </div>
+            </div>
+
+            <ul class="exp-bullets exp-bullets-compact">
+              <li class="exp-bullet"><div class="bullet-icon bullet-green"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><span>Taught <strong>Python beginner to advanced</strong> to international students — data structures, OOP, design patterns, and clean code principles</span></li>
+              <li class="exp-bullet"><div class="bullet-icon bullet-cyan"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><span>Delivered practical modules in <strong>automation scripting</strong>, web scraping, REST APIs, and FastAPI backend development</span></li>
+              <li class="exp-bullet"><div class="bullet-icon bullet-purple"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><span>Introduced students to <strong>AI/ML concepts</strong> — scikit-learn, modern AI agents, and LLM-powered automation workflows</span></li>
+            </ul>
+
+            <div class="exp-curriculum-grid">
+              <div class="curr-pill"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg> Python Fundamentals</div>
+              <div class="curr-pill"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg> OOP &amp; Design</div>
+              <div class="curr-pill"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Automation</div>
+              <div class="curr-pill"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg> Web Scraping</div>
+              <div class="curr-pill"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/></svg> APIs</div>
+              <div class="curr-pill"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg> AI &amp; ML</div>
+              <div class="curr-pill"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/></svg> Backend Dev</div>
+              <div class="curr-pill"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> AI Automation</div>
+            </div>
+
+            <div class="exp-tech-strip">
+              <span class="exp-chip exp-chip-green">Python</span>
+              <span class="exp-chip exp-chip-cyan">scikit-learn</span>
+              <span class="exp-chip exp-chip-purple">AI/ML</span>
+              <span class="exp-chip exp-chip-green">FastAPI</span>
+              <span class="exp-chip exp-chip-cyan">Automation</span>
+              <span class="exp-chip exp-chip-purple">LangChain</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ═══ CARD 2: ONE TECH AND AI ═══ -->
+        <div class="exp-item reveal-up" data-track="engineering" id="expOneTech">
+          <div class="exp-node">
+            <div class="exp-node-core exp-node-core-purple"></div>
+            <div class="exp-node-ring exp-node-ring-purple"></div>
+          </div>
+          <div class="exp-card glass-card exp-card-standard">
+            <div class="exp-card-beam exp-card-beam-purple"></div>
+            <div class="exp-card-header">
+              <div class="exp-company-block">
+                <div class="exp-company-logo exp-logo-purple">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+                </div>
+                <div>
+                  <h3 class="exp-role">AI Engineer Intern</h3>
+                  <div class="exp-company-row">
+                    <span class="exp-company-name">One Tech and AI</span>
+                    <span class="exp-company-dot">·</span>
+                    <span class="exp-type-badge">Internship</span>
+                  </div>
+                </div>
+              </div>
+              <span class="exp-date-badge">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                2024 – Present
+              </span>
+            </div>
+            <ul class="exp-bullets exp-bullets-compact">
+              <li class="exp-bullet"><div class="bullet-icon bullet-purple"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><span>Architected and deployed production <strong>RAG chatbot</strong> infrastructure for real-time clinical and enterprise queries</span></li>
+              <li class="exp-bullet"><div class="bullet-icon bullet-blue"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><span>Built autonomous <strong>AI agents</strong> with tool-use, memory, and multi-step reasoning using LangChain</span></li>
+              <li class="exp-bullet"><div class="bullet-icon bullet-cyan"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><span>Engineered <strong>FastAPI microservices</strong> with async processing, WebSocket support, Docker + Nginx on AWS EC2</span></li>
+              <li class="exp-bullet"><div class="bullet-icon bullet-purple"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><span>Conducted research into <strong>Quantum AI</strong> algorithms and hybrid quantum-classical ML architectures</span></li>
+            </ul>
+            <div class="exp-tech-strip">
+              <span class="exp-chip exp-chip-purple">LangChain</span>
+              <span class="exp-chip exp-chip-blue">FastAPI</span>
+              <span class="exp-chip exp-chip-cyan">Docker</span>
+              <span class="exp-chip exp-chip-purple">AWS</span>
+              <span class="exp-chip exp-chip-blue">RAG</span>
+              <span class="exp-chip exp-chip-cyan">Quantum AI</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ═══ CARD 3: TEACHING ASSISTANT ═══ -->
+        <div class="exp-item reveal-up" data-track="teaching" id="expTA">
+          <div class="exp-node">
+            <div class="exp-node-core exp-node-core-cyan"></div>
+            <div class="exp-node-ring exp-node-ring-cyan"></div>
+          </div>
+          <div class="exp-card glass-card exp-card-standard">
+            <div class="exp-card-beam exp-card-beam-cyan"></div>
+            <div class="exp-card-header">
+              <div class="exp-company-block">
+                <div class="exp-company-logo exp-logo-cyan">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                </div>
+                <div>
+                  <h3 class="exp-role">Teaching Assistant</h3>
+                  <div class="exp-company-row">
+                    <span class="exp-company-name">Generative AI &amp; Deep Learning</span>
+                    <span class="exp-company-dot">·</span>
+                    <span class="exp-type-badge exp-badge-cyan">Academic</span>
+                  </div>
+                </div>
+              </div>
+              <span class="exp-date-badge">2024</span>
+            </div>
+            <ul class="exp-bullets exp-bullets-compact">
+              <li class="exp-bullet"><div class="bullet-icon bullet-cyan"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><span>Taught <strong>Generative AI</strong> — diffusion models, transformers, and LLM fine-tuning to advanced students</span></li>
+              <li class="exp-bullet"><div class="bullet-icon bullet-blue"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><span>Led hands-on <strong>Deep Learning</strong> labs: CNNs, RNNs, Attention mechanisms, and Transformer architectures with PyTorch</span></li>
+              <li class="exp-bullet"><div class="bullet-icon bullet-purple"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><span>Mentored students on building and deploying end-to-end ML projects from scratch</span></li>
+            </ul>
+            <div class="exp-tech-strip">
+              <span class="exp-chip exp-chip-cyan">GenAI</span>
+              <span class="exp-chip exp-chip-blue">Deep Learning</span>
+              <span class="exp-chip exp-chip-purple">PyTorch</span>
+              <span class="exp-chip exp-chip-cyan">Transformers</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ═══ CARD 4: FIVERR ═══ -->
+        <div class="exp-item reveal-up" data-track="freelance" id="expFiverr">
+          <div class="exp-node">
+            <div class="exp-node-core exp-node-core-green"></div>
+            <div class="exp-node-ring exp-node-ring-green"></div>
+          </div>
+          <div class="exp-card glass-card exp-card-standard">
+            <div class="exp-card-beam exp-card-beam-green"></div>
+            <div class="exp-card-header">
+              <div class="exp-company-block">
+                <div class="exp-company-logo exp-logo-green">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                </div>
+                <div>
+                  <h3 class="exp-role">Level 2 AI/ML Freelancer</h3>
+                  <div class="exp-company-row">
+                    <span class="exp-company-name">Fiverr</span>
+                    <span class="exp-company-dot">·</span>
+                    <span class="exp-type-badge exp-badge-green">Freelance</span>
+                  </div>
+                </div>
+              </div>
+              <span class="exp-date-badge">2023 – Present</span>
+            </div>
+            <ul class="exp-bullets exp-bullets-compact">
+              <li class="exp-bullet"><div class="bullet-icon bullet-green"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><span>Delivered custom <strong>AI/ML solutions</strong> — chatbots, recommenders, and data pipelines to international clients with 5-star ratings</span></li>
+              <li class="exp-bullet"><div class="bullet-icon bullet-blue"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><span>Built and deployed <strong>production RAG systems</strong> and AI agents across fintech, healthcare, and e-commerce verticals</span></li>
+              <li class="exp-bullet"><div class="bullet-icon bullet-green"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><span>Achieved <strong>Level 2 seller status</strong> with consistent 5-star reviews from clients in US, UK, and Europe</span></li>
+            </ul>
+            <div class="exp-tech-strip">
+              <span class="exp-chip exp-chip-green">Freelance</span>
+              <span class="exp-chip exp-chip-blue">AI Consulting</span>
+              <span class="exp-chip exp-chip-green">Level 2</span>
+              <span class="exp-chip exp-chip-blue">5★ Rated</span>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /exp-timeline -->
+    </div>
+  </section>
+
+  <!-- ===== ARCHITECTURE SECTION ===== -->
+  <section class="section arch-section" id="architecture">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag reveal-up">05 / Architecture</span>
+        <h2 class="section-title reveal-up">System Architecture</h2>
+        <p class="section-sub reveal-up">How production AI systems are built — from query to cloud</p>
+      </div>
+
+      <div class="arch-canvas-wrap reveal-up">
+        <!-- Background grid -->
+        <div class="arch-bg-grid"></div>
+
+        <!-- Flow diagram -->
+        <div class="arch-flow">
+
+          <!-- Row 1: Client Layer -->
+          <div class="arch-layer">
+            <div class="arch-layer-label">Client Layer</div>
+            <div class="arch-nodes">
+              <div class="arch-node-card arch-nc-blue" id="archClient">
+                <div class="arch-nc-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                </div>
+                <span>Web Client</span>
+                <div class="arch-nc-pulse"></div>
+              </div>
+              <div class="arch-node-card arch-nc-blue" id="archMobile">
+                <div class="arch-nc-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                </div>
+                <span>Mobile / API</span>
+                <div class="arch-nc-pulse"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Arrow down -->
+          <div class="arch-connector arch-conn-vertical">
+            <div class="arch-flow-line arch-fl-vertical">
+              <div class="arch-flow-particle arch-fp-down"></div>
+            </div>
+          </div>
+
+          <!-- Row 2: API Gateway -->
+          <div class="arch-layer">
+            <div class="arch-layer-label">API Gateway</div>
+            <div class="arch-nodes arch-nodes-single">
+              <div class="arch-node-card arch-nc-purple arch-nc-wide" id="archAPI">
+                <div class="arch-nc-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M14 12l-3 5h5l-3 7M10 12l3-5h-5l3-7" opacity="0.6"/><path d="M14 12l-3 5h5M10 12l3-5h-5"/></svg>
+                </div>
+                <div class="arch-nc-content">
+                  <span class="arch-nc-title">FastAPI Gateway</span>
+                  <span class="arch-nc-sub">Auth · Rate Limit · Routing</span>
+                </div>
+                <div class="arch-nc-badge">Nginx</div>
+                <div class="arch-nc-pulse arch-pulse-purple"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Arrow down + split -->
+          <div class="arch-connector arch-conn-split">
+            <div class="arch-split-line arch-sl-left">
+              <div class="arch-flow-particle arch-fp-down-left"></div>
+            </div>
+            <div class="arch-split-line arch-sl-center">
+              <div class="arch-flow-particle arch-fp-down"></div>
+            </div>
+            <div class="arch-split-line arch-sl-right">
+              <div class="arch-flow-particle arch-fp-down-right"></div>
+            </div>
+          </div>
+
+          <!-- Row 3: AI Core -->
+          <div class="arch-layer">
+            <div class="arch-layer-label">AI Core</div>
+            <div class="arch-nodes arch-nodes-trio">
+              <div class="arch-node-card arch-nc-cyan" id="archRAG">
+                <div class="arch-nc-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 22V16a8 8 0 0116 0v6"/><rect x="11" y="20" width="10" height="4" rx="1"/><circle cx="16" cy="10" r="3"/></svg>
+                </div>
+                <span>RAG Pipeline</span>
+                <span class="arch-nc-sub">LangChain · Retrieval</span>
+                <div class="arch-nc-pulse arch-pulse-cyan"></div>
+              </div>
+              <div class="arch-node-card arch-nc-cyan arch-nc-featured" id="archLLM">
+                <div class="arch-nc-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2a10 10 0 1 0 10 10"/><path d="M22 2L12 12"/><path d="M15 2h7v7"/></svg>
+                </div>
+                <span>LLM Engine</span>
+                <span class="arch-nc-sub">GPT · Gemini · MedGemma</span>
+                <div class="arch-nc-pulse arch-pulse-cyan"></div>
+                <div class="arch-nc-featured-glow"></div>
+              </div>
+              <div class="arch-node-card arch-nc-cyan" id="archAgents">
+                <div class="arch-nc-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/><path d="M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"/></svg>
+                </div>
+                <span>AI Agents</span>
+                <span class="arch-nc-sub">Tools · Memory · Reasoning</span>
+                <div class="arch-nc-pulse arch-pulse-cyan"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Arrow down + split -->
+          <div class="arch-connector arch-conn-split">
+            <div class="arch-split-line arch-sl-left">
+              <div class="arch-flow-particle arch-fp-down-left"></div>
+            </div>
+            <div class="arch-split-line arch-sl-center">
+              <div class="arch-flow-particle arch-fp-down"></div>
+            </div>
+            <div class="arch-split-line arch-sl-right">
+              <div class="arch-flow-particle arch-fp-down-right"></div>
+            </div>
+          </div>
+
+          <!-- Row 4: Data Layer -->
+          <div class="arch-layer">
+            <div class="arch-layer-label">Data Layer</div>
+            <div class="arch-nodes arch-nodes-quad">
+              <div class="arch-node-card arch-nc-green" id="archFAISS">
+                <div class="arch-nc-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="2"/><circle cx="16" cy="8" r="2"/><circle cx="12" cy="16" r="2"/><line x1="10" y1="8" x2="14" y2="8"/><line x1="9" y1="10" x2="11" y2="14"/><line x1="15" y1="10" x2="13" y2="14"/></svg>
+                </div>
+                <span>FAISS</span>
+                <span class="arch-nc-sub">Vector Search</span>
+                <div class="arch-nc-pulse arch-pulse-green"></div>
+              </div>
+              <div class="arch-node-card arch-nc-green" id="archNeo4j">
+                <div class="arch-nc-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><circle cx="5" cy="6" r="2"/><circle cx="19" cy="6" r="2"/><circle cx="5" cy="18" r="2"/><circle cx="19" cy="18" r="2"/><line x1="7" y1="7" x2="10" y2="10"/><line x1="17" y1="7" x2="14" y2="10"/><line x1="7" y1="17" x2="10" y2="14"/><line x1="17" y1="17" x2="14" y2="14"/></svg>
+                </div>
+                <span>Neo4j</span>
+                <span class="arch-nc-sub">Knowledge Graph</span>
+                <div class="arch-nc-pulse arch-pulse-green"></div>
+              </div>
+              <div class="arch-node-card arch-nc-green" id="archPG">
+                <div class="arch-nc-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="8" rx="8" ry="3"/><path d="M4 8v4c0 1.66 3.58 3 8 3s8-1.34 8-3V8"/><path d="M4 12v4c0 1.66 3.58 3 8 3s8-1.34 8-3v-4"/></svg>
+                </div>
+                <span>PostgreSQL</span>
+                <span class="arch-nc-sub">pgvector</span>
+                <div class="arch-nc-pulse arch-pulse-green"></div>
+              </div>
+              <div class="arch-node-card arch-nc-green" id="archS3">
+                <div class="arch-nc-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+                </div>
+                <span>S3 / Redis</span>
+                <span class="arch-nc-sub">Storage · Cache</span>
+                <div class="arch-nc-pulse arch-pulse-green"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Arrow down -->
+          <div class="arch-connector arch-conn-vertical">
+            <div class="arch-flow-line arch-fl-vertical">
+              <div class="arch-flow-particle arch-fp-down"></div>
+            </div>
+          </div>
+
+          <!-- Row 5: Cloud Infrastructure -->
+          <div class="arch-layer">
+            <div class="arch-layer-label">Cloud Infrastructure</div>
+            <div class="arch-nodes">
+              <div class="arch-node-card arch-nc-orange" id="archEC2">
+                <div class="arch-nc-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+                </div>
+                <span>AWS EC2</span>
+                <span class="arch-nc-sub">Docker · Nginx</span>
+                <div class="arch-nc-pulse arch-pulse-orange"></div>
+              </div>
+              <div class="arch-node-card arch-nc-orange" id="archCICD">
+                <div class="arch-nc-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/></svg>
+                </div>
+                <span>CI/CD Pipeline</span>
+                <span class="arch-nc-sub">GitHub Actions</span>
+                <div class="arch-nc-pulse arch-pulse-orange"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Live metrics strip -->
+        <div class="arch-metrics">
+          <div class="arch-metric">
+            <span class="arch-metric-dot arch-md-green"></span>
+            <span class="arch-metric-label">API Latency</span>
+            <span class="arch-metric-val">&lt;120ms</span>
+          </div>
+          <div class="arch-metric">
+            <span class="arch-metric-dot arch-md-blue"></span>
+            <span class="arch-metric-label">RAG Retrieval</span>
+            <span class="arch-metric-val">&lt;40ms</span>
+          </div>
+          <div class="arch-metric">
+            <span class="arch-metric-dot arch-md-purple"></span>
+            <span class="arch-metric-label">Vector Search</span>
+            <span class="arch-metric-val">&lt;5ms</span>
+          </div>
+          <div class="arch-metric">
+            <span class="arch-metric-dot arch-md-cyan"></span>
+            <span class="arch-metric-label">Uptime</span>
+            <span class="arch-metric-val">99.9%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ACHIEVEMENTS SECTION ===== -->
+  <section class="section achievements" id="achievements">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag reveal-up">06 / Achievements</span>
+        <h2 class="section-title reveal-up">Milestones</h2>
+      </div>
+      <div class="achievements-grid">
+        <div class="ach-card glass-card reveal-up">
+          <div class="ach-icon-svg">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#00A8FF" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <div class="ach-num" data-count="350">0</div>
+          <div class="ach-plus">+</div>
+          <div class="ach-label">LeetCode Problems Solved</div>
+          <p class="ach-desc">Consistent competitive programming practice covering DSA, dynamic programming, graphs, and system design problems.</p>
+        </div>
+        <div class="ach-card glass-card reveal-up">
+          <div class="ach-icon-svg">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#FFD700" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <div class="ach-label-top">Top</div>
+          <div class="ach-num" data-count="50">0</div>
+          <div class="ach-label">ICPC National Ranking</div>
+          <p class="ach-desc">Competed in the International Collegiate Programming Contest, achieving top 50 ranking nationally among hundreds of teams.</p>
+        </div>
+        <div class="ach-card glass-card reveal-up">
+          <div class="ach-icon-svg">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#7B5EA7" stroke-width="1.5"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          </div>
+          <div class="ach-label-text">Teaching<br>Assistant</div>
+          <div class="ach-label">GenAI &amp; Deep Learning</div>
+          <p class="ach-desc">Selected as TA for advanced AI courses, teaching transformers, diffusion models, LLM fine-tuning, and RAG architectures.</p>
+        </div>
+        <div class="ach-card glass-card reveal-up">
+          <div class="ach-icon-svg">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          </div>
+          <div class="ach-label-text">Level 2</div>
+          <div class="ach-label">Fiverr AI/ML Freelancer</div>
+          <p class="ach-desc">Achieved Level 2 seller status on Fiverr delivering AI/ML solutions — chatbots, recommenders, and production pipelines — to global clients.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag reveal-up">07 / Contact</span>
+        <h2 class="section-title reveal-up">Let's Build Something</h2>
+        <p class="section-sub reveal-up">Open for full-time roles, freelance projects, and collaborations</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-left reveal-left">
+          <p class="contact-msg">
+            Whether you're building the next AI startup, scaling production systems, or solving complex ML challenges — I'd love to hear from you.
+          </p>
+          <div class="contact-links">
+            <a href="mailto:hananmanan144@gmail.com" class="contact-link magnetic" id="emailLink">
+              <div class="cl-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 7L2 7"/></svg>
+              </div>
+              <div class="cl-info">
+                <span class="cl-label">Email</span>
+                <span class="cl-value">hananmanan144@gmail.com</span>
+              </div>
+              <svg class="cl-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="https://github.com/AbdulHanan164" target="_blank" rel="noopener" class="contact-link magnetic" id="githubLink">
+              <div class="cl-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              </div>
+              <div class="cl-info">
+                <span class="cl-label">GitHub</span>
+                <span class="cl-value">github.com/AbdulHanan164</span>
+              </div>
+              <svg class="cl-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="https://linkedin.com/in/abdul-hanan-4bb30334a" target="_blank" rel="noopener" class="contact-link magnetic" id="linkedinLink">
+              <div class="cl-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              </div>
+              <div class="cl-info">
+                <span class="cl-label">LinkedIn</span>
+                <span class="cl-value">linkedin.com/in/abdul-hanan-4bb30334a</span>
+              </div>
+              <svg class="cl-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="contact-right reveal-right">
+          <form class="contact-form glass-card" id="contactForm" novalidate>
+            <div class="form-group" style="display: none;">
+              <input type="text" id="website_honeypot" name="website_honeypot" tabindex="-1" autocomplete="off" placeholder="Website" />
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fname">Name</label>
+                <input type="text" id="fname" name="name" placeholder="John Doe" required autocomplete="name" />
+              </div>
+              <div class="form-group">
+                <label for="femail">Email</label>
+                <input type="email" id="femail" name="email" placeholder="john@company.com" required autocomplete="email" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="fsubject">Subject</label>
+              <input type="text" id="fsubject" name="subject" placeholder="Let's build an AI system..." />
+            </div>
+            <div class="form-group">
+              <label for="fmessage">Message</label>
+              <textarea id="fmessage" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full magnetic" id="submitBtn">
+              <span>Send Message</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+            </button>
+            <div class="form-success" id="formSuccess">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Message sent! I'll get back to you soon.</span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="logo-bracket">&lt;</span>AH<span class="logo-bracket">/&gt;</span>
+        </div>
+        <p class="footer-copy">© 2025 Abdul Hanan. Built with passion & precision.</p>
+        <div class="footer-links">
+          <a href="#hero">Top</a>
+          <a href="https://github.com/AbdulHanan164" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://linkedin.com/in/abdul-hanan-4bb30334a" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
