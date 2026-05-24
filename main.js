@@ -537,7 +537,7 @@ function initContactForm() {
     btn.disabled = true;
 
     try {
-      const response = await fetch('http://localhost:8000/contact', {
+      const response = await fetch('/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
