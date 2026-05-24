@@ -87,7 +87,7 @@ async def send_email_async(contact_data: ContactForm, client_ip: str):
         password=gmail_app_password
     )
 
-@app.post("/contact")
+@app.post("/api/contact")
 @limiter.limit("5/minute") # Rate limiting to prevent spam floods
 async def contact(request: Request, form: ContactForm):
     """
@@ -111,6 +111,6 @@ async def contact(request: Request, form: ContactForm):
         # Return a clean 500 error to the client
         raise HTTPException(status_code=500, detail="Failed to send email due to an internal server error.")
 
-@app.get("/")
+@app.get("/api")
 def read_root():
     return {"message": "Portfolio Contact API is running."}
