@@ -45,7 +45,7 @@ async def send_email_async(contact_data: ContactForm, client_ip: str):
     Asynchronously sends an email using Gmail SMTP and aiosmtplib.
     """
     gmail_user = os.getenv("GMAIL_USER")
-    gmail_app_password = os.getenv("GMAIL_APP_PASSWORD")
+    gmail_app_password = os.getenv("GMAIL_APP_PASSWORD", "").replace(" ", "")
 
     if not gmail_user or not gmail_app_password:
         raise Exception("Server configuration error: Gmail credentials not set.")
