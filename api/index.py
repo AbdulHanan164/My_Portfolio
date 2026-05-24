@@ -109,7 +109,7 @@ async def contact(request: Request, form: ContactForm):
         # Log the error internally (not implemented here for brevity, but a print works for basic logging)
         print(f"Error sending email: {e}")
         # Return a clean 500 error to the client
-        raise HTTPException(status_code=500, detail="Failed to send email due to an internal server error.")
+        raise HTTPException(status_code=500, detail=f"Failed to send email due to an internal server error: {str(e)}")
 
 @app.get("/api")
 def read_root():
